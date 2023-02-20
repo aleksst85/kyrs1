@@ -1,11 +1,15 @@
-#import requests
+
 import json
 
-#res=requests.get("https://jsonkeeper.com/b/2Z96")
-#res_json = res.json()
+
 
 file = open("quest.json")
-print(json.load(file))
+words=json.load(file)
+file.close()
+for word in words:
+    for elem in word:
+        print(elem)
+
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
