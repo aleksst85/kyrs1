@@ -1,4 +1,4 @@
-class Question():
+class Question:
     def __init__(self, word, subword):
         self.word = word
         self.subword = subword

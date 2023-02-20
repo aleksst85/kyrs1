@@ -1,6 +1,8 @@
 import json
 from random import randint
 from quest_class import Question
+
+
 def load_json(path):
     with open(path, "r") as file:
         data_json = file.read()
