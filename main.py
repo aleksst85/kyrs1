@@ -1,14 +1,14 @@
+path = "quest.json"
+from util import load_json
+from quest_class import Question
 
-import json
+word, subword = load_json(path)
+print("Ваше слово", word)
+quiestion = Question(word, subword)
+
+while quiestion.in_correct(input()):
+    print(end='')
 
 
-
-with open("quest.json", "r") as file:
-    data_json = file.read()
-words = json.loads(data_json)
-for word in words:
-    print(word)
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
