@@ -1,10 +1,12 @@
 path = "quest.json"
-from util import load_json
+path_url = "https://www.jsonkeeper.com/b/CPTY"
+from util import load_json, load_request_json
 from quest_class import Question, Plauer
 
 print('Введите имя игрока:', end=' ')
 name = input()
-quiestion = load_json(path)
+#quiestion = load_json(path)
+quiestion = load_request_json(path_url)
 print(f"Привет {name} начнем игру!")
 print(f"{name} составь из слова >>>>{quiestion.word}<<<< {len(quiestion.subword)} слов!")
 print("Слова должны быть не короче 3 букв")

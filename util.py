@@ -1,6 +1,7 @@
 import json
 from random import randint
 from quest_class import Question
+import requests
 
 
 def load_json(path):
@@ -9,3 +10,14 @@ def load_json(path):
     words = json.loads(data_json)
     list_word = (words[randint(0, len(words) - 1)])
     return Question(list_word['word'], list_word['subword'])
+
+
+
+def load_request_json(path):
+    res = requests.get(path)
+    res_json = res.json()
+    words = res_json
+    list_word = (words[randint(0, len(words) - 1)])
+    return Question(list_word['word'], list_word['subword'])
+
+
