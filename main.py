@@ -32,6 +32,7 @@ while flag:
             print("Это слово вы уже использовали")
     else:
         print("Неправильное слово либо некорректный ввод!!!")
+        print(f"Напомню нужное слово {quiestion.word}")
 print(f"Вы угадали {plauer.counts_word_plauer()} из {quiestion.counts_word()} возможных слов")
 
 

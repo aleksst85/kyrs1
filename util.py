@@ -15,8 +15,7 @@ def load_json(path):
 
 def load_request_json(path):
     res = requests.get(path)
-    res_json = res.json()
-    words = res_json
+    words = res.json()
     list_word = (words[randint(0, len(words) - 1)])
     return Question(list_word['word'], list_word['subword'])
 
